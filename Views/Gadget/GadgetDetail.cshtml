@@ -1,0 +1,25 @@
+@model GadgetShop.Models.Gadget
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gadget Details</title>
+</head>
+<body>
+    <div>
+        <img src="@Model.GImageUrl" width="200" height="200" /><br />
+        <h3>Name: @Model.GName</h3>
+        <h4>Category: @Model.GCategory</h4>
+        <b>Price: @Model.GPrice</b><br />
+        <p>Gadget ID: @Model.GId</p>
+    </div>
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

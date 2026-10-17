@@ -1,0 +1,32 @@
+@model List<GadgetShop.Models.Gadget>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gadget Catalog</title>
+</head>
+<body>
+    <h1>Gadget Catalog</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Url</th>
+        </tr>
+        @foreach (var data in Model)
+        {
+            <tr>
+                <td>@data.GName</td>
+                <td>@data.GId</td>
+                <td>
+                    <a href="@Url.Action("Details", "Gadget", new { id = data.GId })">View Details</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
